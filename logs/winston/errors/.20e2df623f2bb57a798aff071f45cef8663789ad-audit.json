@@ -1,0 +1,40 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/home/sajid007/Desktop/Personal/kabir house/kabir house/logs/winston/errors/.20e2df623f2bb57a798aff071f45cef8663789ad-audit.json",
+    "files": [
+        {
+            "date": 1698039681157,
+            "name": "/home/sajid007/Desktop/Personal/kabir house/kabir house/logs/winston/errors/phu-2023-23-10-11-error.log",
+            "hash": "4ce1fe022acb789d514a42303ffffe0f9d72ae58e3d7a2f893aeb62b2fe01f21"
+        },
+        {
+            "date": 1698042322928,
+            "name": "/home/sajid007/Desktop/Personal/kabir house/kabir house/logs/winston/errors/phu-2023-23-10-12-error.log",
+            "hash": "97ed789faf1fb62d27d96aa5f4879a2ba74b6e655cb776b3db88f65aaeb816ed"
+        },
+        {
+            "date": 1698045928265,
+            "name": "/home/sajid007/Desktop/Personal/kabir house/kabir house/logs/winston/errors/phu-2023-23-10-13-error.log",
+            "hash": "1c75feddb404e1b192c947a8d36229f80b905966511a9f54ada549ad74d85f52"
+        },
+        {
+            "date": 1698051860004,
+            "name": "/home/sajid007/Desktop/Personal/kabir house/kabir house/logs/winston/errors/phu-2023-23-10-15-error.log",
+            "hash": "ba6c9597f7200e1f7012371f61667d570bef049f2f2a13391cf84cb1621ae706"
+        },
+        {
+            "date": 1698056650917,
+            "name": "/home/sajid007/Desktop/Personal/kabir house/kabir house/logs/winston/errors/phu-2023-23-10-16-error.log",
+            "hash": "5f6cb71ff3102b5db07c3544af9c659b7d3537336f27abab1934c77edca121aa"
+        },
+        {
+            "date": 1698059514432,
+            "name": "/home/sajid007/Desktop/Personal/kabir house/kabir house/logs/winston/errors/phu-2023-23-10-17-error.log",
+            "hash": "10da41fe78cc53d7cfc5505fcd77383016c11b65ee8405419c69ca61e4264d8e"
+        }
+    ],
+    "hashType": "sha256"
+}

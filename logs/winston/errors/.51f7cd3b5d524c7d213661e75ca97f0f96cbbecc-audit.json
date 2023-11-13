@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/home/sajid007/Desktop/Personal/medical_student_attendance_management/logs/winston/errors/.51f7cd3b5d524c7d213661e75ca97f0f96cbbecc-audit.json",
+    "files": [
+        {
+            "date": 1699856603326,
+            "name": "/home/sajid007/Desktop/Personal/medical_student_attendance_management/logs/winston/errors/phu-2023-13-11-12-error.log",
+            "hash": "54cd61b4ae17fcdb0ec2d881a899376eb2086b626380a7884263667010dd986e"
+        }
+    ],
+    "hashType": "sha256"
+}
