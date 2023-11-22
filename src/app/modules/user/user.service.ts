@@ -12,17 +12,10 @@ import { IUser } from './user.interface';
 import { User } from './user.model';
 import { generateAdminId } from './user.utils';
 
-const createStudent = async (
+const regStudent = async (
   student: IStudent,
   user: IUser
 ): Promise<IUser | null> => {
-  // If password is not given,set default password
-  if (!user.password) {
-    user.password = config.default_student_pass as string;
-  }
-  // set role
-  user.role = 'student';
-
   let newUserAllData = null;
   const session = await mongoose.startSession();
   try {
@@ -56,20 +49,21 @@ const createStudent = async (
   }
 
   if (newUserAllData) {
-    newUserAllData = await User.findOne({ id: newUserAllData.id }).populate({
-      path: 'student',
-      populate: [
-        {
-          path: 'academicSemester',
-        },
-        {
-          path: 'academicDepartment',
-        },
-        {
-          path: 'academicFaculty',
-        },
-      ],
-    });
+    newUserAllData = await User.findOne({ id: newUserAllData.id });
+    // .populate({
+    //   path: 'student',
+    //   populate: [
+    //     {
+    //       path: 'academicSemester',
+    //     },
+    //     {
+    //       path: 'academicDepartment',
+    //     },
+    //     {
+    //       path: 'academicFaculty',
+    //     },
+    //   ],
+    // });
   }
 
   if (newUserAllData) {
@@ -99,7 +93,7 @@ const createAdmin = async (
     session.startTransaction();
     // generate admin id
     const id = await generateAdminId();
-    user.id = id;
+    user.email = id;
     admin.id = id;
 
     const newAdmin = await Admin.create([admin], { session });
@@ -140,6 +134,6 @@ const createAdmin = async (
 };
 
 export const UserService = {
-  createStudent,
+  regStudent,
   createAdmin,
 };

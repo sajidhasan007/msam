@@ -1,51 +1,31 @@
 import { Model } from 'mongoose';
 
-export type UserName = {
-  firstName: string;
-  lastName: string;
-  middleName: string;
-};
-
-export type Guardian = {
+export type IStudent = {
+  fullName: string;
+  phoneNumber: string;
+  email: string;
   fatherName: string;
-  fatherOccupation: string;
   fatherContactNo: string;
   motherName: string;
-  motherOccupation: string;
-  motherContactNo: string;
-  address: string;
-};
-
-export type LocalGuardian = {
-  name: string;
-  occupation: string;
-  contactNo: string;
-  address: string;
-};
-
-export type IStudent = {
-  id: string;
-  name: UserName; //embedded object
-  gender: 'male' | 'female';
-  dateOfBirth: string;
-  email: string;
-  contactNo: string;
-  emergencyContactNo: string;
-  bloodGroup?: 'A+' | 'A-' | 'B+' | 'B-' | 'AB+' | 'AB-' | 'O+' | 'O-';
   presentAddress: string;
   permanentAddress: string;
-  guardian: Guardian; // embedded object
-  localGuardian: LocalGuardian; // embedded object
-  profileImage?: string;
+  rollNo: string;
+  dhakaUniversityRegNo: string;
+  session: string;
+  sscYear: number;
+  sscGpa: number;
+  hscYear: number;
+  hscGpa: number;
+  gender: 'male' | 'female' | 'others';
 };
 
 export type StudentModel = Model<IStudent, Record<string, unknown>>;
 
 export type IStudentFilters = {
   searchTerm?: string;
-  id?: string;
-  bloodGroup?: string;
-  email?: string;
-  contactNo?: string;
-  emergencyContactNo?: string;
+
+  gender?: string;
+  session?: string;
+  sscYear?: number;
+  hscYear?: number;
 };

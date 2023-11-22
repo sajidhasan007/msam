@@ -7,10 +7,10 @@ import { UserValidation } from './user.validation';
 const router = express.Router();
 
 router.post(
-  '/create-student',
-  validateRequest(UserValidation.createStudentZodSchema),
-  auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
-  UserController.createStudent
+  '/student-reg',
+  // validateRequest(UserValidation.regStudentZodSchema),
+  // auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
+  UserController.regStudent
 );
 
 router.post(

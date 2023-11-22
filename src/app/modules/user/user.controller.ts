@@ -1,15 +1,25 @@
 import { Request, Response } from 'express';
 import { RequestHandler } from 'express-serve-static-core';
 import httpStatus from 'http-status';
+import ApiError from '../../../errors/ApiError';
 import catchAsync from '../../../shared/catchAsync';
 import sendResponse from '../../../shared/sendResponse';
 import { IUser } from './user.interface';
 import { UserService } from './user.service';
 
-const createStudent: RequestHandler = catchAsync(
+const regStudent: RequestHandler = catchAsync(
   async (req: Request, res: Response) => {
-    const { student, ...userData } = req.body;
-    const result = await UserService.createStudent(student, userData);
+    const { email, password, confirmPassword, ...student } = req.body;
+    if (password !== confirmPassword) {
+      throw new ApiError(httpStatus.BAD_REQUEST, 'Password does not match');
+    }
+    const user: IUser = {
+      email,
+      role: 'student',
+      password,
+    };
+
+    const result = await UserService.regStudent(student, user);
 
     sendResponse<IUser>(res, {
       statusCode: httpStatus.OK,
@@ -35,6 +45,6 @@ const createAdmin: RequestHandler = catchAsync(
 );
 
 export const UserController = {
-  createStudent,
+  regStudent,
   createAdmin,
 };

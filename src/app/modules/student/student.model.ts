@@ -1,56 +1,29 @@
 import { Schema, model } from 'mongoose';
-import { bloodGroup, gender } from './student.constant';
+import { gender } from './student.constant';
 import { IStudent, StudentModel } from './student.interface';
 
 export const StudentSchema = new Schema<IStudent, StudentModel>(
   {
-    id: {
+    fullName: {
       type: String,
-      required: true,
-      unique: true,
-    },
-    name: {
-      type: {
-        firstName: {
-          type: String,
-          required: true,
-        },
-        lastName: {
-          type: String,
-          required: true,
-        },
-        middleName: {
-          type: String,
-          required: false,
-        },
-      },
       required: true,
     },
     gender: {
       type: String,
       enum: gender,
     },
-    dateOfBirth: {
-      type: String,
-    },
+
     email: {
       type: String,
       unique: true,
       required: true,
     },
-    contactNo: {
+    phoneNumber: {
       type: String,
       unique: true,
       required: true,
     },
-    emergencyContactNo: {
-      type: String,
-      required: true,
-    },
-    bloodGroup: {
-      type: String,
-      enum: bloodGroup,
-    },
+
     presentAddress: {
       type: String,
       required: true,
@@ -59,69 +32,47 @@ export const StudentSchema = new Schema<IStudent, StudentModel>(
       type: String,
       required: true,
     },
-    guardian: {
+    fatherName: {
+      type: String,
       required: true,
-      type: {
-        fatherName: {
-          type: String,
-          required: true,
-        },
-        fatherOccupation: {
-          type: String,
-          required: true,
-        },
-        fatherContactNo: {
-          type: String,
-          required: true,
-        },
-        motherName: {
-          type: String,
-          required: true,
-        },
-        motherOccupation: {
-          type: String,
-          required: true,
-        },
-        motherContactNo: {
-          type: String,
-          required: true,
-        },
-        address: {
-          type: String,
-          required: true,
-        },
-      },
     },
-    localGuardian: {
+    motherName: {
+      type: String,
       required: true,
-      type: {
-        name: {
-          type: String,
-          required: true,
-        },
-        occupation: {
-          type: String,
-          required: true,
-        },
-        contactNo: {
-          type: String,
-          required: true,
-        },
-        address: {
-          type: String,
-          required: true,
-        },
-      },
+    },
+    rollNo: {
+      type: String,
+      required: true,
+    },
+    dhakaUniversityRegNo: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+    session: {
+      type: String,
+      required: true,
+    },
+    sscYear: {
+      type: Number,
+      required: true,
+    },
+    sscGpa: {
+      type: Number,
+      required: true,
+    },
+    hscYear: {
+      type: Number,
+      required: true,
+    },
+    hscGpa: {
+      type: Number,
+      required: true,
     },
 
-    // academicSemester: {
-    //   type: Schema.Types.ObjectId,
-    //   ref: 'AcademicSemester',
-    //   required: true,
+    // profileImage: {
+    //   type: String,
     // },
-    profileImage: {
-      type: String,
-    },
   },
   {
     timestamps: true,
