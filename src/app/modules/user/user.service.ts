@@ -24,6 +24,8 @@ const regStudent = async (
     // set custom id into both  student & user
 
     // Create student using sesssin
+    student.email = user.email;
+
     const newStudent = await Student.create([student], { session });
 
     if (!newStudent.length) {
@@ -31,7 +33,7 @@ const regStudent = async (
     }
 
     // set student _id (reference) into user.student
-    user.student = newStudent[0]._id;
+    user.email = student.email;
 
     const newUser = await User.create([user], { session });
 

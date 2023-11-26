@@ -59,8 +59,41 @@ const changePassword = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const forgotPass = catchAsync(async (req: Request, res: Response) => {
+  await AuthService.forgotPass(req.body);
+
+  sendResponse(res, {
+    statusCode: 200,
+    success: true,
+    message: 'Check your email!',
+  });
+});
+
+const matchOtp = catchAsync(async (req: Request, res: Response) => {
+  await AuthService.matchOtp(req.body);
+
+  sendResponse(res, {
+    statusCode: 200,
+    success: true,
+    message: 'Otp has been matched!',
+  });
+});
+
+const resetPassword = catchAsync(async (req: Request, res: Response) => {
+  await AuthService.resetPassword(req.body);
+
+  sendResponse(res, {
+    statusCode: 200,
+    success: true,
+    message: 'Account recovered!',
+  });
+});
+
 export const AuthController = {
   loginUser,
   refreshToken,
   changePassword,
+  forgotPass,
+  resetPassword,
+  matchOtp,
 };
