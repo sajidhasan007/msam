@@ -7,6 +7,7 @@ export type ITeacher = {
   email: string;
   designation: string;
   gender: 'male' | 'female' | 'others';
+  // classRoom:
 };
 
 export type TeacherModel = Model<ITeacher, Record<string, unknown>>;

@@ -2,6 +2,7 @@ import express from 'express';
 import { AdminRoutes } from '../modules/admin/admin.route';
 import { AuthRoutes } from '../modules/auth/auth.route';
 
+import { ClassRoutes } from '../modules/classes/class.router';
 import { FloorRoutes } from '../modules/floor/floor.router';
 import { StudentRoutes } from '../modules/student/student.route';
 import { UserRoutes } from '../modules/user/user.route';
@@ -28,6 +29,10 @@ const moduleRoutes = [
   {
     path: '/floor',
     route: FloorRoutes,
+  },
+  {
+    path: '/class',
+    route: ClassRoutes,
   },
 ];
 

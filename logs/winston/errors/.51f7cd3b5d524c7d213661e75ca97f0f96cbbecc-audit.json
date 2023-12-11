@@ -19,6 +19,11 @@
             "date": 1702281643484,
             "name": "/home/sajid007/Desktop/Personal/medical_student_attendance_management/logs/winston/errors/phu-2023-11-12-14-error.log",
             "hash": "1646d374f5ad48c8e8c26fbc0d90652cb185102f7a2401f722facd065cbaa109"
+        },
+        {
+            "date": 1702295479544,
+            "name": "/home/sajid007/Desktop/Personal/medical_student_attendance_management/logs/winston/errors/phu-2023-11-12-17-error.log",
+            "hash": "89c50ffc575bbe3ce68c60b00d7296ea4773fb8e5d124a7dde6e446ec7f1bc38"
         }
     ],
     "hashType": "sha256"
