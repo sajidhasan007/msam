@@ -1,6 +1,0 @@
-Wed Nov 22 2023 16:44:23 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Password does not match
-Wed Nov 22 2023 16:50:39 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Student validation failed: email: Path `email` is required.
-Wed Nov 22 2023 16:51:33 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Student validation failed: email: Path `email` is required.
-Wed Nov 22 2023 16:53:12 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Student validation failed: email: Path `email` is required.
-Wed Nov 22 2023 16:53:15 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Student validation failed: email: Path `email` is required.
-Wed Nov 22 2023 16:54:10 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Student validation failed: email: Path `email` is required.

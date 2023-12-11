@@ -6,59 +6,19 @@
     "auditLog": "/home/sajid007/Desktop/Personal/medical_student_attendance_management/logs/winston/errors/.51f7cd3b5d524c7d213661e75ca97f0f96cbbecc-audit.json",
     "files": [
         {
-            "date": 1699856603326,
-            "name": "/home/sajid007/Desktop/Personal/medical_student_attendance_management/logs/winston/errors/phu-2023-13-11-12-error.log",
-            "hash": "54cd61b4ae17fcdb0ec2d881a899376eb2086b626380a7884263667010dd986e"
+            "date": 1702274944770,
+            "name": "/home/sajid007/Desktop/Personal/medical_student_attendance_management/logs/winston/errors/phu-2023-11-12-12-error.log",
+            "hash": "7b4e3399ccc4c261e5c6e614336dd554d2b470f4d4cb445bd090f309d2a806f9"
         },
         {
-            "date": 1700032312560,
-            "name": "/home/sajid007/Desktop/Personal/medical_student_attendance_management/logs/winston/errors/phu-2023-15-11-13-error.log",
-            "hash": "a036a4f0f9c4a9cc04b01ba748fdbb5a2adcab522f7a8ee8831e200fc2de5117"
+            "date": 1702281453575,
+            "name": "/home/sajid007/Desktop/Personal/medical_student_attendance_management/logs/winston/errors/phu-2023-11-12-13-error.log",
+            "hash": "70aa5b9619f51246df640a4f8d858d7f80d0e55ce5143e8a68d24993904292f0"
         },
         {
-            "date": 1700646237528,
-            "name": "/home/sajid007/Desktop/Personal/medical_student_attendance_management/logs/winston/errors/phu-2023-22-11-15-error.log",
-            "hash": "f695a1929ea0f342e66399108d776ff219b377677e71ee9ce07f8faf58914d1a"
-        },
-        {
-            "date": 1700649863325,
-            "name": "/home/sajid007/Desktop/Personal/medical_student_attendance_management/logs/winston/errors/phu-2023-22-11-16-error.log",
-            "hash": "82301494bc1d13c716cb2518c9f3b26900bc331ac33b9de7c848f9689cbda455"
-        },
-        {
-            "date": 1700973062352,
-            "name": "/home/sajid007/Desktop/Personal/medical_student_attendance_management/logs/winston/errors/phu-2023-26-11-10-error.log",
-            "hash": "62751acb51afc8932788613f9d4e53804e58af2a4c5c18a3a20451c0ae3facc2"
-        },
-        {
-            "date": 1700980613312,
-            "name": "/home/sajid007/Desktop/Personal/medical_student_attendance_management/logs/winston/errors/phu-2023-26-11-12-error.log",
-            "hash": "1e3a835d6fd9366c4bde289a1c405680f5fa27f99ce9913baf568299e0fb728b"
-        },
-        {
-            "date": 1700983343313,
-            "name": "/home/sajid007/Desktop/Personal/medical_student_attendance_management/logs/winston/errors/phu-2023-26-11-13-error.log",
-            "hash": "c8372603e091a130fe686da4d1d70106fb4a5d9fe7802a9bc2b54889cb61b020"
-        },
-        {
-            "date": 1700985687123,
-            "name": "/home/sajid007/Desktop/Personal/medical_student_attendance_management/logs/winston/errors/phu-2023-26-11-14-error.log",
-            "hash": "5fb72b1dcf30f276e894c35678cd3ef824dda2fc9e3ca725a9ac4e8d67069df9"
-        },
-        {
-            "date": 1700989305423,
-            "name": "/home/sajid007/Desktop/Personal/medical_student_attendance_management/logs/winston/errors/phu-2023-26-11-15-error.log",
-            "hash": "d23c0b0fbbf0ba5c03062238886b242ed0243d3a3ecaa2d3e01690352a8aeb54"
-        },
-        {
-            "date": 1700992898357,
-            "name": "/home/sajid007/Desktop/Personal/medical_student_attendance_management/logs/winston/errors/phu-2023-26-11-16-error.log",
-            "hash": "10ee9d39e6a1b41bb55ffe238f436a8301085d32c63d2f83ca738b6fc6323eb9"
-        },
-        {
-            "date": 1700996497833,
-            "name": "/home/sajid007/Desktop/Personal/medical_student_attendance_management/logs/winston/errors/phu-2023-26-11-17-error.log",
-            "hash": "07a2c67651befc4bfb2e278eb697cc768baa8aeb0921045f990d8a95630e5713"
+            "date": 1702281643484,
+            "name": "/home/sajid007/Desktop/Personal/medical_student_attendance_management/logs/winston/errors/phu-2023-11-12-14-error.log",
+            "hash": "1646d374f5ad48c8e8c26fbc0d90652cb185102f7a2401f722facd065cbaa109"
         }
     ],
     "hashType": "sha256"

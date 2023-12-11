@@ -30,6 +30,28 @@ const regStudent: RequestHandler = catchAsync(
   }
 );
 
+const createTeacher: RequestHandler = catchAsync(
+  async (req: Request, res: Response) => {
+    const { email, password, confirmPassword, ...teacher } = req.body;
+    if (password !== confirmPassword) {
+      throw new ApiError(httpStatus.BAD_REQUEST, 'Password does not match');
+    }
+    const user: IUser = {
+      email,
+      role: 'teacher',
+      password,
+    };
+
+    const result = await UserService.createTeacher(teacher, user);
+
+    sendResponse<IUser>(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'Teacher created successfully!',
+      data: result,
+    });
+  }
+);
 const createAdmin: RequestHandler = catchAsync(
   async (req: Request, res: Response) => {
     const { admin, ...userData } = req.body;
@@ -46,5 +68,6 @@ const createAdmin: RequestHandler = catchAsync(
 
 export const UserController = {
   regStudent,
+  createTeacher,
   createAdmin,
 };

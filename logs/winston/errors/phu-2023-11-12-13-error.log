@@ -1,0 +1,1 @@
+Mon Dec 11 2023 13:57:39 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ E11000 duplicate key error collection: kabir-house.teachers index: email_1 dup key: { email: "teacher4@example.com" }

@@ -1,2 +1,0 @@
-Sun Nov 26 2023 12:43:32 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ E11000 duplicate key error collection: kabir-house.students index: dhakaUniversityRegNo_1 dup key: { dhakaUniversityRegNo: "DU2023REG001" }
-Sun Nov 26 2023 12:43:58 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ E11000 duplicate key error collection: kabir-house.students index: dhakaUniversityRegNo_1 dup key: { dhakaUniversityRegNo: "DU2023REG001" }
