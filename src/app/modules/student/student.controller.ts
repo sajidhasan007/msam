@@ -60,7 +60,7 @@ const deleteStudent = catchAsync(async (req: Request, res: Response) => {
   sendResponse<IStudent>(res, {
     statusCode: httpStatus.OK,
     success: true,
-    message: 'Student deleted successfully !',
+    message: 'Student deleted successfully!',
     data: result,
   });
 });

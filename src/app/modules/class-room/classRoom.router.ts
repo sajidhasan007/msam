@@ -1,8 +1,8 @@
 import express from 'express';
-import { FloorController } from './floor.controller';
+import { ClassRoomController } from './classRoom.controller';
 const router = express.Router();
 
-router.post('/create-floor', FloorController.createFloor);
-router.get('/', FloorController.getAllFloor);
+router.post('/', ClassRoomController.createClassRoom);
+// router.get('/', FloorController.getAllFloor);
 
-export const FloorRoutes = router;
+export const ClassRoomRoutes = router;

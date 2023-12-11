@@ -1,0 +1,30 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/home/md/Desktop/React Js/medical_student_attendance_management/logs/winston/errors/.6bb33f96722fdc53269c5d8f9ad569b424840de1-audit.json",
+    "files": [
+        {
+            "date": 1702225933165,
+            "name": "/home/md/Desktop/React Js/medical_student_attendance_management/logs/winston/errors/phu-2023-10-12-22-error.log",
+            "hash": "0bebda9fd61139696e3f47d7225c304681308d229d074e689ed16970a78a1461"
+        },
+        {
+            "date": 1702227645167,
+            "name": "/home/md/Desktop/React Js/medical_student_attendance_management/logs/winston/errors/phu-2023-10-12-23-error.log",
+            "hash": "4a9a281ef76703d65a42bf1ab4db672247f64a5aa1b6e9f00697624cedeba2dc"
+        },
+        {
+            "date": 1702311287059,
+            "name": "/home/md/Desktop/React Js/medical_student_attendance_management/logs/winston/errors/phu-2023-11-12-22-error.log",
+            "hash": "2a91ecd770329122cde1e694d42cef306f89e32c6918f59acffee5365d5a6fae"
+        },
+        {
+            "date": 1702317484669,
+            "name": "/home/md/Desktop/React Js/medical_student_attendance_management/logs/winston/errors/phu-2023-11-12-23-error.log",
+            "hash": "6fb13c36d5447b0383690f45b7d1dae174cde736ee97a282866cf4b37d150f9a"
+        }
+    ],
+    "hashType": "sha256"
+}

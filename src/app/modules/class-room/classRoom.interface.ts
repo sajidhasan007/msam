@@ -1,12 +1,15 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Model, Types } from 'mongoose';
+import { IClasses } from '../classes/class.interface';
+import { IStudent } from '../student/student.interface';
 
-export type IFloor = {
+export type IClassRoom = {
   _id?: string;
   title: string;
-  totalFloat: number;
-  flats?: Types.ObjectId;
-  renter?: Types.ObjectId;
+  classCode: string;
+  description?: string;
+  students?: Types.ObjectId[] | IStudent[];
+  classes?: Types.ObjectId[] | IClasses[];
 };
 
-export type FloorModel = Model<IFloor, Record<string, unknown>>;
+export type ClassModel = Model<IClassRoom, Record<string, unknown>>;

@@ -1,24 +1,26 @@
-import { IFloor } from './floor.interface';
-import { Floor } from './floor.model';
+import { IClassRoom } from './classRoom.interface';
+import { ClassRoom } from './classRoom.model';
 
-const crateFloor = async (floor: IFloor): Promise<IFloor | null> => {
-  const newfloor = await Floor.create(floor);
-  return newfloor;
+const crateClassRoom = async (
+  payload: IClassRoom
+): Promise<IClassRoom | null> => {
+  const newClassRoom = await ClassRoom.create(payload);
+  return newClassRoom;
 };
 
-const getAllFloor = async () => {
-  const allFloor = await Floor.find();
-  return {
-    meta: {
-      page: 1,
-      limit: 10,
-      total: 10,
-    },
-    data: allFloor,
-  };
-};
+// const getAllClassRoom = async () => {
+//   const allClassRoom = await ClassRoom.find();
+//   return {
+//     meta: {
+//       page: 1,
+//       limit: 10,
+//       total: 10,
+//     },
+//     data: allClassRoom,
+//   };
+// };
 
-export const FloorService = {
-  crateFloor,
-  getAllFloor,
+export const ClassRoomService = {
+  crateClassRoom,
+  // getAllClassRoom,
 };

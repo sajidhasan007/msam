@@ -1,16 +1,33 @@
 import { Schema, model } from 'mongoose';
-import { FloorModel, IFloor } from './floor.interface';
+import { ClassModel, IClassRoom } from './classRoom.interface';
 
-export const FloorSchema = new Schema<IFloor, FloorModel>({
+export const ClassRoomSchema = new Schema<IClassRoom, ClassModel>({
   title: {
     type: String,
     required: true,
-    unique: true,
   },
-  totalFloat: {
-    type: Number,
+  classCode: {
+    type: String,
     required: true,
   },
+  description: {
+    type: String,
+  },
+  students: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Student',
+    },
+  ],
+  classes: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Class',
+    },
+  ],
 });
 
-export const Floor = model<IFloor, FloorModel>('Floor', FloorSchema);
+export const ClassRoom = model<IClassRoom, ClassModel>(
+  'ClassRoom',
+  ClassRoomSchema
+);
