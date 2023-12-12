@@ -5,6 +5,7 @@ import { IStudent } from '../student/student.interface';
 import { ITeacher } from '../teacher/teacher.interface';
 
 export type IUser = {
+  _id?: Types.ObjectId;
   email: string;
   role: string;
   password: string;
@@ -16,7 +17,7 @@ export type IUser = {
 export type UserModel = {
   isUserExist(
     email: string
-  ): Promise<Pick<IUser, 'email' | 'password' | 'role'>>;
+  ): Promise<Pick<IUser, 'email' | 'password' | 'role' | '_id'>>;
   isPasswordMatched(
     givenPassword: string,
     savedPassword: string

@@ -6,6 +6,7 @@ import catchAsync from '../../../shared/catchAsync';
 import sendResponse from '../../../shared/sendResponse';
 import { IUser } from './user.interface';
 import { UserService } from './user.service';
+import { ENUM_USER_ROLE } from '../../../enums/user';
 
 const regStudent: RequestHandler = catchAsync(
   async (req: Request, res: Response) => {
@@ -38,7 +39,7 @@ const createTeacher: RequestHandler = catchAsync(
     }
     const user: IUser = {
       email,
-      role: 'teacher',
+      role: ENUM_USER_ROLE.TEACHER,
       password,
     };
 

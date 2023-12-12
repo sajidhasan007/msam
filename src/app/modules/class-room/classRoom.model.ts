@@ -9,10 +9,17 @@ export const ClassRoomSchema = new Schema<IClassRoom, ClassModel>({
   classCode: {
     type: String,
     required: true,
+    unique: true,
   },
   description: {
     type: String,
   },
+  teacherId: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Teacher',
+    },
+  ],
   students: [
     {
       type: Schema.Types.ObjectId,
