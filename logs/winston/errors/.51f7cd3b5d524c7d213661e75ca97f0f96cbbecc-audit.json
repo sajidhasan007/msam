@@ -34,6 +34,21 @@
             "date": 1702368026399,
             "name": "/home/sajid007/Desktop/Personal/medical_student_attendance_management/logs/winston/errors/phu-2023-12-12-14-error.log",
             "hash": "3bffdd0eadcb2931828ae15ae99ea6ecbb34a9083f5bcb4694328a2fac6a37fe"
+        },
+        {
+            "date": 1702372009983,
+            "name": "/home/sajid007/Desktop/Personal/medical_student_attendance_management/logs/winston/errors/phu-2023-12-12-15-error.log",
+            "hash": "b626654b49bf50b70af7b27460903919dd1dad5cf26da1d284a700f14ba4e695"
+        },
+        {
+            "date": 1702376038680,
+            "name": "/home/sajid007/Desktop/Personal/medical_student_attendance_management/logs/winston/errors/phu-2023-12-12-16-error.log",
+            "hash": "b0a408705d4561b4c1335c6b70d069d8ed54d951b669d3645f0672b1aaa769fb"
+        },
+        {
+            "date": 1702379175376,
+            "name": "/home/sajid007/Desktop/Personal/medical_student_attendance_management/logs/winston/errors/phu-2023-12-12-17-error.log",
+            "hash": "8f56320eb0b0b1fbf6859538a7493d47693cfa87cc58c32b55562add3bc3c855"
         }
     ],
     "hashType": "sha256"

@@ -12,6 +12,10 @@ router.post(
   auth(ENUM_USER_ROLE.TEACHER),
   ClassRoomController.createClassRoom
 );
-// router.get('/', FloorController.getAllFloor);
+router.get(
+  '/',
+  auth(ENUM_USER_ROLE.TEACHER),
+  ClassRoomController.getAllClassRoom
+);
 
 export const ClassRoomRoutes = router;

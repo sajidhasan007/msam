@@ -7,6 +7,6 @@ router.post(
   // validateRequest(ClassValidation.classesZodSchema),
   ClassController.createClass
 );
-// router.get('/', ClassController.getAllFloor);
+// router.get('/', ClassController.);
 
 export const ClassRoutes = router;

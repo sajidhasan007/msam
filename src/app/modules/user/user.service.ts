@@ -105,8 +105,6 @@ const createTeacher = async (
     user.email = teacher.email;
     user.teacher = newTeacher[0]._id as Types.ObjectId;
 
-    console.log('my teacher user is = ', user);
-
     const newUser = await User.create([user], { session });
 
     if (!newUser.length) {
