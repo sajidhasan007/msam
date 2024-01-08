@@ -1,0 +1,11 @@
+Mon Jan 08 2024 17:4:20 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ jwt expired
+Mon Jan 08 2024 17:5:19 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ jwt expired
+Mon Jan 08 2024 17:9:17 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ jwt expired
+Mon Jan 08 2024 17:10:17 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ jwt expired
+Mon Jan 08 2024 17:12:50 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ jwt expired
+Mon Jan 08 2024 17:17:7 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ jwt expired
+Mon Jan 08 2024 17:17:41 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ jwt expired
+Mon Jan 08 2024 17:21:52 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ jwt expired
+Mon Jan 08 2024 17:24:5 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Cast to ObjectId failed for value "123243423" (type string) at path "_id" for model "ClassRoom"
+Mon Jan 08 2024 17:24:24 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Cast to ObjectId failed for value "123243423987765" (type string) at path "_id" for model "ClassRoom"
+Mon Jan 08 2024 17:30:57 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ You are not authorized

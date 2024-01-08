@@ -1,3 +1,0 @@
-Mon Dec 11 2023 12:11:21 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ E11000 duplicate key error collection: kabir-house.users index: email_1 dup key: { email: "john@example.com" }
-Mon Dec 11 2023 12:15:23 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Password does not match
-Mon Dec 11 2023 12:18:49 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Cannot populate path `teacher` because it is not in your schema. Set the `strictPopulate` option to false to override.

@@ -6,6 +6,10 @@ export const ClassSchema = new Schema<IClasses, ClassesModel>({
     type: String,
     required: true,
   },
+  isDone: {
+    type: Boolean,
+    default: false,
+  },
   description: {
     type: String,
   },

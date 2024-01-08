@@ -5,6 +5,7 @@ import { IStudent } from '../student/student.interface';
 export type IClasses = {
   _id?: string;
   title: string;
+  isDone?: boolean;
   description?: string;
   dateTime?: Date;
   students?: Types.ObjectId[] | IStudent[];

@@ -10,7 +10,9 @@ const auth =
   async (req: Request, res: Response, next: NextFunction) => {
     try {
       //get authorization token
+
       const token = req.headers.authorization;
+      console.log('my token is = ', token);
       if (!token) {
         throw new ApiError(httpStatus.UNAUTHORIZED, 'You are not authorized');
       }
@@ -27,6 +29,8 @@ const auth =
       }
       next();
     } catch (error) {
+      console.log('my user data is = ');
+
       next(error);
     }
   };

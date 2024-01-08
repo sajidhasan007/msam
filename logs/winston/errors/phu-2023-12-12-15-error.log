@@ -1,2 +1,0 @@
-Tue Dec 12 2023 15:8:28 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Cast to ObjectId failed for value "123456566" (type string) at path "_id" for model "Class"
-Tue Dec 12 2023 15:12:22 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Classroom not found
