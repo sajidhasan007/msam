@@ -13,14 +13,12 @@ const crateClass = async (
   session.startTransaction();
 
   try {
-    console.log('my classroom id is = ', classRoomId);
     const isClassRoomExist = await ClassRoom.findOne({
       _id: classRoomId,
     }).session(session);
     if (!isClassRoomExist) {
       throw new ApiError(httpStatus.BAD_REQUEST, 'Classroom not found');
     }
-    console.log('my classroom is = ', isClassRoomExist?.title);
 
     const newClass: IClasses[] = await Class.create([payload], { session }); // Using session for create
 

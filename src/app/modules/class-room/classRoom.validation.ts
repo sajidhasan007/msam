@@ -10,6 +10,13 @@ const classRoomZodSchema = z.object({
   }),
 });
 
+const enrollInClassRoomZodSchema = z.object({
+  body: z.object({
+    classCode: z.string(),
+  }),
+});
+
 export const ClassRoomValidation = {
   classRoomZodSchema,
+  enrollInClassRoomZodSchema,
 };

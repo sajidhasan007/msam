@@ -44,8 +44,23 @@ const getSingleClassRoom = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const enrollInClassRoom = catchAsync(async (req: Request, res: Response) => {
+  const classCode = req.body.classCode;
+  const userId = req?.user?.userId;
+
+  await ClassRoomService.enrollInClassRoom(classCode, userId);
+
+  sendResponse<IClassRoom>(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'You have enrolled successfully !',
+    // data: result,
+  });
+});
+
 export const ClassRoomController = {
   createClassRoom,
   getAllClassRoom,
   getSingleClassRoom,
+  enrollInClassRoom,
 };

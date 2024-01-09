@@ -24,6 +24,31 @@
             "date": 1704785327177,
             "name": "/home/sajid007/Desktop/Personal/medical_student_attendance_management/logs/winston/errors/phu-2024-09-01-13-error.log",
             "hash": "3aa7f09f5089cd70c5d37ed511dee6aff350e02aab6a0f247bbcb97298e69fe4"
+        },
+        {
+            "date": 1704787432174,
+            "name": "/home/sajid007/Desktop/Personal/medical_student_attendance_management/logs/winston/errors/phu-2024-09-01-14-error.log",
+            "hash": "c3eb2a8e302915c8fb805c54fabb8bdfe0063cd331142cc43f239fd9f1ea54d2"
+        },
+        {
+            "date": 1704792106303,
+            "name": "/home/sajid007/Desktop/Personal/medical_student_attendance_management/logs/winston/errors/phu-2024-09-01-15-error.log",
+            "hash": "3ce8281ead7a5cf40891f6dbec01f0cb351f0fe9fe855c601b61ac482f6ccdb2"
+        },
+        {
+            "date": 1704794453859,
+            "name": "/home/sajid007/Desktop/Personal/medical_student_attendance_management/logs/winston/errors/phu-2024-09-01-16-error.log",
+            "hash": "0a29ddba3ae31ab01cadafd5906ff2ec1c81d65436c4162f039ca43f912aa23b"
+        },
+        {
+            "date": 1704798114659,
+            "name": "/home/sajid007/Desktop/Personal/medical_student_attendance_management/logs/winston/errors/phu-2024-09-01-17-error.log",
+            "hash": "f6f52770e85bd208b523177f684392a996ed9df4800ff157ab726ff063b334e5"
+        },
+        {
+            "date": 1704801755762,
+            "name": "/home/sajid007/Desktop/Personal/medical_student_attendance_management/logs/winston/errors/phu-2024-09-01-18-error.log",
+            "hash": "a64b8de75c4595c5589d850503c9f165b394a89f1595d26b04dbf1f96b47970a"
         }
     ],
     "hashType": "sha256"

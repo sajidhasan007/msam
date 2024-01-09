@@ -2,7 +2,7 @@ import { Model } from 'mongoose';
 
 export type IStudent = {
   fullName: string;
-  fd: string;
+  phoneNumber: string;
   email: string;
   fatherName: string;
   fatherContactNo: string;

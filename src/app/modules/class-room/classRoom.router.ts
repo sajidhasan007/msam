@@ -24,4 +24,11 @@ router.get(
   ClassRoomController.getSingleClassRoom
 );
 
+router.post(
+  '/enroll',
+  validateRequest(ClassRoomValidation.enrollInClassRoomZodSchema),
+  auth(ENUM_USER_ROLE.STUDENT),
+  ClassRoomController.enrollInClassRoom
+);
+
 export const ClassRoomRoutes = router;
