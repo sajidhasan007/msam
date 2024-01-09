@@ -31,7 +31,21 @@ const getAllClassRoom: RequestHandler = catchAsync(
   }
 );
 
+const getSingleClassRoom = catchAsync(async (req: Request, res: Response) => {
+  const id = req.params.id;
+  const teacherId = req?.user?.userId;
+  const result = await ClassRoomService.getSingleClassRoom(id, teacherId);
+
+  sendResponse<IClassRoom>(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Class room fetched successfully !',
+    data: result,
+  });
+});
+
 export const ClassRoomController = {
   createClassRoom,
   getAllClassRoom,
+  getSingleClassRoom,
 };

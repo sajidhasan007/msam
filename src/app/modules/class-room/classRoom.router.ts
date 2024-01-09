@@ -18,4 +18,10 @@ router.get(
   ClassRoomController.getAllClassRoom
 );
 
+router.get(
+  '/:id',
+  auth(ENUM_USER_ROLE.TEACHER, ENUM_USER_ROLE.SUPER_ADMIN),
+  ClassRoomController.getSingleClassRoom
+);
+
 export const ClassRoomRoutes = router;

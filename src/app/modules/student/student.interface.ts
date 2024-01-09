@@ -2,7 +2,7 @@ import { Model } from 'mongoose';
 
 export type IStudent = {
   fullName: string;
-  phoneNumber: string;
+  fd: string;
   email: string;
   fatherName: string;
   fatherContactNo: string;
@@ -23,7 +23,6 @@ export type StudentModel = Model<IStudent, Record<string, unknown>>;
 
 export type IStudentFilters = {
   searchTerm?: string;
-
   gender?: string;
   session?: string;
   sscYear?: number;
