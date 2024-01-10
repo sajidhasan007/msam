@@ -13,7 +13,7 @@ export const findLastStudentId = async (): Promise<string | undefined> => {
     })
     .lean();
 
-  return lastStudent?.id ? lastStudent.id.substring(4) : undefined;
+  return lastStudent?.email ? lastStudent.email.substring(4) : undefined;
 };
 
 export const generateStudentId = async (
@@ -40,7 +40,7 @@ export const findLastFacultyId = async (): Promise<string | undefined> => {
     })
     .lean();
 
-  return lastFaculty?.id ? lastFaculty.id.substring(2) : undefined;
+  return lastFaculty?.email ? lastFaculty.email.substring(2) : undefined;
 };
 
 export const generateFacultyId = async (): Promise<string> => {
@@ -60,7 +60,7 @@ export const findLastAdminId = async (): Promise<string | undefined> => {
     })
     .lean();
 
-  return lastFaculty?.id ? lastFaculty.id.substring(2) : undefined;
+  return lastFaculty?.email ? lastFaculty.email.substring(2) : undefined;
 };
 
 export const generateAdminId = async (): Promise<string> => {

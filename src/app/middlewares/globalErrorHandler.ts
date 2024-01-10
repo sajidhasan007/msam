@@ -7,7 +7,9 @@ import ApiError from '../../errors/ApiError';
 import handleValidationError from '../../errors/handleValidationError';
 
 import { ZodError } from 'zod';
+import haldleTokenExpireError from '../../errors/haldleTokenExpireError';
 import handleCastError from '../../errors/handleCastError';
+import handleMongoDuplicateKeyError from '../../errors/handleMongoServerError';
 import handleZodError from '../../errors/handleZodError';
 import { IGenericErrorMessage } from '../../interfaces/error';
 import { errorlogger } from '../../shared/logger';
@@ -26,6 +28,8 @@ const globalErrorHandler: ErrorRequestHandler = (
   let message = 'Something went wrong !';
   let errorMessages: IGenericErrorMessage[] = [];
 
+  console.log('my error name is = ', error?.name);
+
   if (error?.name === 'ValidationError') {
     const simplifiedError = handleValidationError(error);
     statusCode = simplifiedError.statusCode;
@@ -36,8 +40,18 @@ const globalErrorHandler: ErrorRequestHandler = (
     statusCode = simplifiedError.statusCode;
     message = simplifiedError.message;
     errorMessages = simplifiedError.errorMessages;
+  } else if (error?.name === 'MongoServerError') {
+    const simplifiedError = handleMongoDuplicateKeyError(error);
+    statusCode = simplifiedError.statusCode;
+    message = simplifiedError.message;
+    errorMessages = simplifiedError.errorMessages;
   } else if (error?.name === 'CastError') {
     const simplifiedError = handleCastError(error);
+    statusCode = simplifiedError.statusCode;
+    message = simplifiedError.message;
+    errorMessages = simplifiedError.errorMessages;
+  } else if (error?.name === 'TokenExpiredError') {
+    const simplifiedError = haldleTokenExpireError();
     statusCode = simplifiedError.statusCode;
     message = simplifiedError.message;
     errorMessages = simplifiedError.errorMessages;

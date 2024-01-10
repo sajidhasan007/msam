@@ -6,7 +6,7 @@ import { IUser, UserModel } from './user.interface';
 
 const UserSchema = new Schema<IUser, UserModel>(
   {
-    id: {
+    email: {
       type: String,
       required: true,
       unique: true,
@@ -20,16 +20,19 @@ const UserSchema = new Schema<IUser, UserModel>(
       required: true,
       select: 0,
     },
-    needsPasswordChange: {
-      type: Boolean,
-      default: true,
+
+    userId: {
+      type: Schema.Types.ObjectId,
+      required: true,
     },
-    passwordChangedAt: {
-      type: Date,
-    },
+
     student: {
       type: Schema.Types.ObjectId,
       ref: 'Student',
+    },
+    teacher: {
+      type: Schema.Types.ObjectId,
+      ref: 'Teacher',
     },
     admin: {
       type: Schema.Types.ObjectId,
@@ -45,11 +48,11 @@ const UserSchema = new Schema<IUser, UserModel>(
 );
 
 UserSchema.statics.isUserExist = async function (
-  id: string
+  email: string
 ): Promise<IUser | null> {
   return await User.findOne(
-    { id },
-    { id: 1, password: 1, role: 1, needsPasswordChange: 1 }
+    { email },
+    { email: 1, password: 1, role: 1, _id: 1, userId: 1 }
   );
 };
 
@@ -74,10 +77,6 @@ UserSchema.pre('save', async function (next) {
     user.password,
     Number(config.bycrypt_salt_rounds)
   );
-
-  if (!user.needsPasswordChange) {
-    user.passwordChangedAt = new Date();
-  }
 
   next();
 });

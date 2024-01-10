@@ -2,21 +2,23 @@
 import { Model, Types } from 'mongoose';
 import { IAdmin } from '../admin/admin.interface';
 import { IStudent } from '../student/student.interface';
+import { ITeacher } from '../teacher/teacher.interface';
 
 export type IUser = {
-  id: string;
+  _id?: Types.ObjectId;
+  email: string;
   role: string;
   password: string;
-  needsPasswordChange: boolean;
-  passwordChangedAt?: Date;
+  userId?: Types.ObjectId;
   student?: Types.ObjectId | IStudent;
+  teacher?: Types.ObjectId | ITeacher;
   admin?: Types.ObjectId | IAdmin;
 };
 
 export type UserModel = {
   isUserExist(
-    id: string
-  ): Promise<Pick<IUser, 'id' | 'password' | 'role' | 'needsPasswordChange'>>;
+    email: string
+  ): Promise<Pick<IUser, 'email' | 'password' | 'role' | '_id' | 'userId'>>;
   isPasswordMatched(
     givenPassword: string,
     savedPassword: string

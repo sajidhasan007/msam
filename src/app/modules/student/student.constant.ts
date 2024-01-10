@@ -1,22 +1,19 @@
-export const gender = ['male', 'female'];
+export const gender = ['male', 'female', 'others'];
 export const bloodGroup = ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'];
 
 export const studentSearchableFields = [
-  'id',
   'email',
   'contactNo',
-  'name.fisrtName',
-  'name.middleName',
-  'name.lastName',
+  'fullName',
+  'dhakaUniversityRegNo',
 ];
 
 export const studentFilterableFields = [
   'searchTerm',
-  'id',
-  'bloodGroup',
-  'email',
-  'contactNo',
-  'emergencyContactNo',
+  'gender',
+  'session',
+  'sscYear',
+  'hscYear',
 ];
 
-export const EVENT_STUDENT_UPDATED = 'student.updated'
+export const EVENT_STUDENT_UPDATED = 'student.updated';

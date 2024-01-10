@@ -1,14 +1,14 @@
+import { Model } from 'mongoose';
 import { ENUM_USER_ROLE } from '../../../enums/user';
 
 export type ILoginUser = {
-  id: string;
+  email: string;
   password: string;
 };
 
 export type ILoginUserResponse = {
   accessToken: string;
   refreshToken?: string;
-  needsPasswordChange: boolean;
 };
 
 export type IRefreshTokenResponse = {
@@ -24,3 +24,15 @@ export type IChangePassword = {
   oldPassword: string;
   newPassword: string;
 };
+
+export type IForgetPassword = {
+  email: string;
+  otp: string;
+  otpSetTime: Date;
+  isOtpMatch: boolean;
+};
+
+export type ForgetPasswordModel = Model<
+  IForgetPassword,
+  Record<string, unknown>
+>;

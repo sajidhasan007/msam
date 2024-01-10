@@ -12,6 +12,8 @@ export default {
   default_faculty_pass: process.env.DEFAULT_FACULTY_PASS,
   default_admin_pass: process.env.DEFAULT_ADMIN_PASS,
   bycrypt_salt_rounds: process.env.BCRYPT_SALT_ROUNDS,
+  email: 'sajidhasan1997@gmail.com',
+  appPass: 'nqeu ddzu qwvg tjsx',
   jwt: {
     secret: process.env.JWT_SECRET,
     refresh_secret: process.env.JWT_REFRESH_SECRET,
@@ -20,6 +22,6 @@ export default {
   },
   redis: {
     url: process.env.REDIS_URL,
-    expires_in: process.env.REDIS_TOKEN_EXPIRES_IN
-  }
+    expires_in: process.env.REDIS_TOKEN_EXPIRES_IN,
+  },
 };
