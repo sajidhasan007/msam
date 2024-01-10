@@ -21,6 +21,11 @@ const UserSchema = new Schema<IUser, UserModel>(
       select: 0,
     },
 
+    userId: {
+      type: Schema.Types.ObjectId,
+      required: true,
+    },
+
     student: {
       type: Schema.Types.ObjectId,
       ref: 'Student',
@@ -47,7 +52,7 @@ UserSchema.statics.isUserExist = async function (
 ): Promise<IUser | null> {
   return await User.findOne(
     { email },
-    { email: 1, password: 1, role: 1, _id: 1 }
+    { email: 1, password: 1, role: 1, _id: 1, userId: 1 }
   );
 };
 

@@ -54,9 +54,6 @@ const getAllStudents = async (
     andConditions.length > 0 ? { $and: andConditions } : {};
 
   const result = await Student.find(whereConditions)
-    .populate('academicSemester')
-    .populate('academicDepartment')
-    .populate('academicFaculty')
     .sort(sortConditions)
     .skip(skip)
     .limit(limit);

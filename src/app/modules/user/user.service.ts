@@ -35,6 +35,9 @@ const regStudent = async (
     // set student _id (reference) into user.student
     user.email = student.email;
     user.student = newStudent[0]._id as Types.ObjectId;
+    user.userId = newStudent[0]._id as Types.ObjectId;
+
+    console.log('my user data is = ', user);
 
     const newUser = await User.create([user], { session });
 
@@ -104,6 +107,7 @@ const createTeacher = async (
     // set student _id (reference) into user.student
     user.email = teacher.email;
     user.teacher = newTeacher[0]._id as Types.ObjectId;
+    user.userId = newTeacher[0]._id as Types.ObjectId;
 
     const newUser = await User.create([user], { session });
 

@@ -26,6 +26,7 @@ const loginUser = async (payload: ILoginUser): Promise<ILoginUserResponse> => {
   //   const isUserExist = await user.isUserExist(id);
 
   const isUserExist = await User.isUserExist(email);
+  console.log('my user is = ', isUserExist);
 
   if (!isUserExist) {
     throw new ApiError(httpStatus.NOT_FOUND, 'User does not exist');
@@ -40,7 +41,7 @@ const loginUser = async (payload: ILoginUser): Promise<ILoginUserResponse> => {
 
   //create access token & refresh token
 
-  const { _id: userId, role } = isUserExist;
+  const { userId, role } = isUserExist;
   const accessToken = jwtHelpers.createToken(
     { userId, role },
     config.jwt.secret as Secret,

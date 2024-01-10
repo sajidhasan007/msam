@@ -28,8 +28,6 @@ const auth =
       }
       next();
     } catch (error) {
-      console.log('my user data is = ');
-
       next(error);
     }
   };

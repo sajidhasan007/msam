@@ -1,0 +1,8 @@
+Wed Jan 10 2024 16:2:33 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ E11000 duplicate key error collection: kabir-house.students index: email_1 dup key: { email: "sajid.hasan5@misfit.tech" }
+Wed Jan 10 2024 16:2:50 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ E11000 duplicate key error collection: kabir-house.students index: email_1 dup key: { email: "sajid.hasan5@misfit.tech" }
+Wed Jan 10 2024 16:3:10 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ E11000 duplicate key error collection: kabir-house.students index: email_1 dup key: { email: "sajid.hasan5@misfit.tech" }
+Wed Jan 10 2024 16:3:38 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ E11000 duplicate key error collection: kabir-house.students index: email_1 dup key: { email: "sajid.hasan6@misfit.tech" }
+Wed Jan 10 2024 16:4:57 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ You have already enrolled this class !
+Wed Jan 10 2024 16:29:7 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ jwt expired
+Wed Jan 10 2024 16:29:33 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ E11000 duplicate key error collection: kabir-house.classrooms index: classCode_1 dup key: { classCode: "CSE-111" }
+Wed Jan 10 2024 16:31:47 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Teacher not authorized for this class.
