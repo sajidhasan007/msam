@@ -38,6 +38,16 @@ const crateClass = async (
   }
 };
 
+const giveAttendance = async (
+  payload: IClasses,
+  classRoomId: string,
+  classId: string
+): Promise<void> => {
+  console.log('my payload is ', payload?.students);
+  console.log('my classRoomId is ', classRoomId);
+  console.log('my classId is ', classId);
+};
+
 // const getAllFloor = async () => {
 //   const allFloor = await Class.find();
 //   return {
@@ -52,5 +62,6 @@ const crateClass = async (
 
 export const ClassService = {
   crateClass,
+  giveAttendance,
   // getAllFloor,
 };

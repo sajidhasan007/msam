@@ -21,6 +21,24 @@ const createClass: RequestHandler = catchAsync(
   }
 );
 
+const giveAttendance: RequestHandler = catchAsync(
+  async (req: Request, res: Response) => {
+    await ClassService.giveAttendance(
+      req.body,
+      req.params.classRoomId,
+      req.params.classId
+    );
+
+    sendResponse<IClasses>(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'Attendance submitted successfully!',
+      // data: result,
+    });
+  }
+);
+
 export const ClassController = {
   createClass,
+  giveAttendance,
 };
