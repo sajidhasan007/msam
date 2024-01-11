@@ -1,0 +1,13 @@
+Thu Jan 11 2024 17:2:3 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Cast to ObjectId failed for value "[" (type string) at path "students" because of "BSONError"
+Thu Jan 11 2024 17:2:29 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Cast to ObjectId failed for value "[" (type string) at path "students" because of "BSONError"
+Thu Jan 11 2024 17:4:44 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Cast to ObjectId failed for value "[" (type string) at path "students" because of "BSONError"
+Thu Jan 11 2024 17:19:25 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Unexpected token ''', "['659e6b80e"... is not valid JSON
+Thu Jan 11 2024 17:19:40 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ studentIds is not defined
+Thu Jan 11 2024 17:20:30 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Cast to ObjectId failed for value "['659e6b80eb6a6a12c2962067']" (type string) at path "students" because of "BSONError"
+Thu Jan 11 2024 17:21:56 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ payload.students.map is not a function
+Thu Jan 11 2024 17:22:58 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ payload.students.map is not a function
+Thu Jan 11 2024 17:23:4 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ payload.students.map is not a function
+Thu Jan 11 2024 17:23:37 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ payload.students.map is not a function
+Thu Jan 11 2024 17:23:52 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ payload.students.map is not a function
+Thu Jan 11 2024 17:24:10 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ payload.students.map is not a function
+Thu Jan 11 2024 17:24:28 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Cast to ObjectId failed for value "[659e6b80eb6a6a12c2962067]" (type string) at path "students" because of "BSONError"

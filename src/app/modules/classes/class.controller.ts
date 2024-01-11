@@ -38,7 +38,24 @@ const giveAttendance: RequestHandler = catchAsync(
   }
 );
 
+const getSingleClass: RequestHandler = catchAsync(
+  async (req: Request, res: Response) => {
+    const result = await ClassService.getSingleClass(
+      req.params.classRoomId,
+      req.params.classId
+    );
+
+    sendResponse<IClasses>(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'Class fetched successfully!',
+      data: result,
+    });
+  }
+);
+
 export const ClassController = {
   createClass,
   giveAttendance,
+  getSingleClass,
 };

@@ -15,6 +15,11 @@ router.post(
   ClassController.giveAttendance
 );
 
+router.get(
+  '/class-room/:classRoomId/class/:classId',
+  auth(ENUM_USER_ROLE.TEACHER),
+  ClassController.getSingleClass
+);
 // router.get('/', ClassController.);
 
 export const ClassRoutes = router;

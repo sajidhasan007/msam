@@ -1,6 +1,7 @@
 import httpStatus from 'http-status';
-import mongoose from 'mongoose';
+import mongoose, { Types } from 'mongoose';
 import ApiError from '../../../errors/ApiError';
+import { idEqualtyCheck } from '../../../shared/idEqualtyCheck';
 import { ClassRoom } from '../class-room/classRoom.model';
 import { IClasses } from './class.interface';
 import { Class } from './class.model';
@@ -38,14 +39,65 @@ const crateClass = async (
   }
 };
 
+const getSingleClass = async (
+  classRoomId: string,
+  classId: string
+): Promise<IClasses | null | undefined> => {
+  const result = await ClassRoom.findOne({ _id: classRoomId }).populate(
+    'classes'
+  );
+  if (!result) {
+    throw new ApiError(httpStatus.NOT_FOUND, 'Class room not found.');
+  }
+
+  const singleClass = result.classes?.find(
+    (item: IClasses | Types.ObjectId) => item?._id?.toString() === classId
+  );
+
+  if (!singleClass) {
+    throw new ApiError(httpStatus.NOT_FOUND, 'Class not found.');
+  }
+
+  console.log('my classes are = ', singleClass);
+  return singleClass as IClasses;
+};
+
 const giveAttendance = async (
-  payload: IClasses,
+  payload: { students: string[] },
   classRoomId: string,
   classId: string
 ): Promise<void> => {
   console.log('my payload is ', payload?.students);
-  console.log('my classRoomId is ', classRoomId);
-  console.log('my classId is ', classId);
+  // console.log('my classRoomId is ', classRoomId);
+  // console.log('my classId is ', classId);
+  const result = await ClassRoom.findOne({ _id: classRoomId });
+  if (!result) {
+    throw new ApiError(httpStatus.NOT_FOUND, 'Class room not found.');
+  }
+
+  if (!idEqualtyCheck(result?.classes as Types.ObjectId[])?.includes(classId)) {
+    throw new ApiError(httpStatus.NOT_FOUND, 'Class not found !');
+  }
+
+  // await Class.updateOne({ _id: classId }, { $push: { students: payload } });
+  // const studentIdsString = payload.students.map((item: string) =>
+  //   JSON.parse(item)
+  // ); // Assuming payload.students is a string
+  // const studentIds = JSON.parse(studentIdsString);
+
+  // Now studentIds is an array of student IDs
+
+  // console.log('my student data is = ', studentIdsString);
+
+  await Class.updateOne(
+    { _id: classId },
+    {
+      $set: {
+        isDone: true,
+      },
+      $push: { students: { $each: payload?.students } },
+    }
+  );
 };
 
 // const getAllFloor = async () => {
@@ -63,5 +115,6 @@ const giveAttendance = async (
 export const ClassService = {
   crateClass,
   giveAttendance,
+  getSingleClass,
   // getAllFloor,
 };
