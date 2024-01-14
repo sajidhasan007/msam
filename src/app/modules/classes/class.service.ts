@@ -67,9 +67,6 @@ const giveAttendance = async (
   classRoomId: string,
   classId: string
 ): Promise<void> => {
-  console.log('my payload is ', payload?.students);
-  // console.log('my classRoomId is ', classRoomId);
-  // console.log('my classId is ', classId);
   const result = await ClassRoom.findOne({ _id: classRoomId });
   if (!result) {
     throw new ApiError(httpStatus.NOT_FOUND, 'Class room not found.');
@@ -94,8 +91,9 @@ const giveAttendance = async (
     {
       $set: {
         isDone: true,
+        students: payload?.students,
       },
-      $push: { students: { $each: payload?.students } },
+      // $push: { students: { $each: payload?.students } },
     }
   );
 };

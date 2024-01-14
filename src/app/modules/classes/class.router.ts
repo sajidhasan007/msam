@@ -10,7 +10,7 @@ router.post(
   ClassController.createClass
 );
 router.post(
-  '/class-room/:classRoomId/class/:classId',
+  '/attendance/class-room/:classRoomId/class/:classId',
   auth(ENUM_USER_ROLE.TEACHER),
   ClassController.giveAttendance
 );
