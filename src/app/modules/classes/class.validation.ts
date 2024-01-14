@@ -9,6 +9,13 @@ const classesZodSchema = z.object({
   }),
 });
 
+const attendanceZodSchema = z.object({
+  body: z.object({
+    students: z.array(z.string()),
+  }),
+});
+
 export const ClassValidation = {
   classesZodSchema,
+  attendanceZodSchema,
 };

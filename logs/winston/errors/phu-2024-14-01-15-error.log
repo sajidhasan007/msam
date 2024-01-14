@@ -1,0 +1,36 @@
+Sun Jan 14 2024 15:0:56 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "title"
+    ],
+    "message": "Required"
+  }
+]
+Sun Jan 14 2024 15:3:24 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ [
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "undefined",
+    "path": [
+      "body",
+      "students"
+    ],
+    "message": "Required"
+  }
+]
+Sun Jan 14 2024 15:3:39 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ [
+  {
+    "code": "invalid_type",
+    "expected": "array",
+    "received": "string",
+    "path": [
+      "body",
+      "students"
+    ],
+    "message": "Expected array, received string"
+  }
+]

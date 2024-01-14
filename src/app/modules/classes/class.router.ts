@@ -1,7 +1,9 @@
 import express from 'express';
 import { ENUM_USER_ROLE } from '../../../enums/user';
 import auth from '../../middlewares/auth';
+import validateRequest from '../../middlewares/validateRequest';
 import { ClassController } from './class.controller';
+import { ClassValidation } from './class.validation';
 const router = express.Router();
 
 router.post(
@@ -11,6 +13,7 @@ router.post(
 );
 router.post(
   '/attendance/class-room/:classRoomId/class/:classId',
+  validateRequest(ClassValidation.attendanceZodSchema),
   auth(ENUM_USER_ROLE.TEACHER),
   ClassController.giveAttendance
 );
