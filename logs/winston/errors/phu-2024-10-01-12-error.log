@@ -1,8 +1,0 @@
-Wed Jan 10 2024 12:0:4 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Teacher not authorized for this class.
-Wed Jan 10 2024 12:9:34 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Cannot populate path `academicSemester` because it is not in your schema. Set the `strictPopulate` option to false to override.
-Wed Jan 10 2024 12:15:27 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ You have already enrolled this class !
-Wed Jan 10 2024 12:15:36 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ You have already enrolled this class !
-Wed Jan 10 2024 12:18:16 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ You have already enrolled this class !
-Wed Jan 10 2024 12:26:16 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ You have already enrolled this class !
-Wed Jan 10 2024 12:41:56 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ E11000 duplicate key error collection: kabir-house.students index: email_1 dup key: { email: "sajid.hasan3@misfit.tech" }
-Wed Jan 10 2024 12:42:51 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ E11000 duplicate key error collection: kabir-house.students index: phoneNumber_1 dup key: { phoneNumber: "01518375067" }
