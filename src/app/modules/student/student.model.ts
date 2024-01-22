@@ -70,9 +70,9 @@ export const StudentSchema = new Schema<IStudent, StudentModel>(
       required: true,
     },
 
-    // profileImage: {
-    //   type: String,
-    // },
+    profileImage: {
+      type: String,
+    },
   },
   {
     timestamps: true,

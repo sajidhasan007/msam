@@ -1,15 +1,17 @@
 import { Request, Response } from 'express';
 import { RequestHandler } from 'express-serve-static-core';
 import httpStatus from 'http-status';
+import { ENUM_USER_ROLE } from '../../../enums/user';
 import ApiError from '../../../errors/ApiError';
 import catchAsync from '../../../shared/catchAsync';
 import sendResponse from '../../../shared/sendResponse';
 import { IUser } from './user.interface';
 import { UserService } from './user.service';
-import { ENUM_USER_ROLE } from '../../../enums/user';
 
 const regStudent: RequestHandler = catchAsync(
   async (req: Request, res: Response) => {
+    console.log('my request file is = ', req.body);
+    return;
     const { email, password, confirmPassword, ...student } = req.body;
     if (password !== confirmPassword) {
       throw new ApiError(httpStatus.BAD_REQUEST, 'Password does not match');

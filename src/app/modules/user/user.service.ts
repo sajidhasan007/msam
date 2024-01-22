@@ -16,6 +16,9 @@ const regStudent = async (
   student: IStudent,
   user: IUser
 ): Promise<IUser | null> => {
+  // const file = req.file as IUploadFile;
+  //   const uploadedImage = await FileUploadHelper.uploadToCloudinary(file);
+
   let newUserAllData = null;
   const session = await mongoose.startSession();
   try {

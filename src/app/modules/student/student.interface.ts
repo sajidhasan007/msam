@@ -17,6 +17,7 @@ export type IStudent = {
   hscYear: number;
   hscGpa: number;
   gender: 'male' | 'female' | 'others';
+  profileImage?: string;
 };
 
 export type StudentModel = Model<IStudent, Record<string, unknown>>;
