@@ -1,10 +1,12 @@
+import { Request } from 'express';
 import httpStatus from 'http-status';
 import mongoose, { Types } from 'mongoose';
 import config from '../../../config/index';
 import ApiError from '../../../errors/ApiError';
+import { FileUploadHelper } from '../../../helpers/fileUploadHelper';
+import { IUploadFile } from '../../../interfaces/file';
 import { IAdmin } from '../admin/admin.interface';
 import { Admin } from '../admin/admin.model';
-import { IStudent } from '../student/student.interface';
 import { Student } from '../student/student.model';
 import { ITeacher } from '../teacher/teacher.interface';
 import { Teacher } from '../teacher/teacher.model';
@@ -12,12 +14,25 @@ import { IUser } from './user.interface';
 import { User } from './user.model';
 import { generateAdminId } from './user.utils';
 
-const regStudent = async (
-  student: IStudent,
-  user: IUser
-): Promise<IUser | null> => {
-  // const file = req.file as IUploadFile;
-  //   const uploadedImage = await FileUploadHelper.uploadToCloudinary(file);
+const regStudent = async (req: Request): Promise<IUser | null> => {
+  // console.log('my student request body is = ', req.body);
+  // console.log('my student request file is = ', req.file);
+  const { email, password, confirmPassword, ...student } = req.body;
+  if (password !== confirmPassword) {
+    throw new ApiError(httpStatus.BAD_REQUEST, 'Password does not match');
+  }
+  const user: IUser = {
+    email,
+    role: 'student',
+    password,
+  };
+  if (req.file) {
+    const file = req.file as IUploadFile;
+    const uploadedImage = await FileUploadHelper.uploadToCloudinary(file);
+    student.profileImage = uploadedImage?.secure_url || null;
+  } else {
+    student.profileImage = null;
+  }
 
   let newUserAllData = null;
   const session = await mongoose.startSession();

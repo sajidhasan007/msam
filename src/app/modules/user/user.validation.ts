@@ -22,6 +22,7 @@ const regStudentZodSchema = z.object({
     hscYear: z.number().int().min(1900).max(new Date().getFullYear()),
     hscGpa: z.number().min(0).max(5),
     gender: z.enum(['male', 'female', 'other']),
+    profileImage: z.string().optional(),
   }),
 });
 
@@ -137,7 +138,7 @@ const createAdminZodSchema = z.object({
       designation: z.string({
         required_error: 'Designation is required',
       }),
-      profileImage: z.string().optional(),
+      profileImage: z.any().optional(),
     }),
   }),
 });

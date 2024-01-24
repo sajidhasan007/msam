@@ -1,0 +1,13 @@
+Wed Jan 24 2024 16:3:15 } [MSAM] error: 🐱‍🏍 globalErrorHandler ~~ User does not exist
+Wed Jan 24 2024 16:3:24 } [MSAM] error: 🐱‍🏍 globalErrorHandler ~~ User does not exist
+Wed Jan 24 2024 16:3:30 } [MSAM] error: 🐱‍🏍 globalErrorHandler ~~ User does not exist
+Wed Jan 24 2024 16:3:45 } [MSAM] error: 🐱‍🏍 globalErrorHandler ~~ User does not exist
+Wed Jan 24 2024 16:41:44 } [MSAM] error: 🐱‍🏍 globalErrorHandler ~~ Password is incorrect
+Wed Jan 24 2024 16:42:8 } [MSAM] error: 🐱‍🏍 globalErrorHandler ~~ Password is incorrect
+Wed Jan 24 2024 16:42:33 } [MSAM] error: 🐱‍🏍 globalErrorHandler ~~ Cannot read properties of undefined (reading 'path')
+Wed Jan 24 2024 16:43:45 } [MSAM] error: 🐱‍🏍 globalErrorHandler ~~ Cannot read properties of undefined (reading 'path')
+Wed Jan 24 2024 16:44:21 } [MSAM] error: 🐱‍🏍 globalErrorHandler ~~ Password does not match
+Wed Jan 24 2024 16:44:27 } [MSAM] error: 🐱‍🏍 globalErrorHandler ~~ Cannot read properties of undefined (reading 'path')
+Wed Jan 24 2024 16:45:25 } [MSAM] error: 🐱‍🏍 globalErrorHandler ~~ E11000 duplicate key error collection: kabir-house.students index: email_1 dup key: { email: "sajid.hasan4@misfit.tech" }
+Wed Jan 24 2024 16:47:40 } [MSAM] error: 🐱‍🏍 globalErrorHandler ~~ Student validation failed: hscGpa: Path `hscGpa` is required., hscYear: Path `hscYear` is required., sscGpa: Path `sscGpa` is required., sscYear: Path `sscYear` is required., session: Path `session` is required., dhakaUniversityRegNo: Path `dhakaUniversityRegNo` is required., rollNo: Path `rollNo` is required., motherName: Path `motherName` is required., fatherName: Path `fatherName` is required., permanentAddress: Path `permanentAddress` is required., presentAddress: Path `presentAddress` is required., phoneNumber: Path `phoneNumber` is required., fullName: Path `fullName` is required., email: Path `email` is required.
+Wed Jan 24 2024 16:48:54 } [MSAM] error: 🐱‍🏍 globalErrorHandler ~~ Student validation failed: hscGpa: Path `hscGpa` is required., hscYear: Path `hscYear` is required., sscGpa: Path `sscGpa` is required., sscYear: Path `sscYear` is required., session: Path `session` is required., dhakaUniversityRegNo: Path `dhakaUniversityRegNo` is required., rollNo: Path `rollNo` is required., motherName: Path `motherName` is required., fatherName: Path `fatherName` is required., permanentAddress: Path `permanentAddress` is required., presentAddress: Path `presentAddress` is required., phoneNumber: Path `phoneNumber` is required., fullName: Path `fullName` is required., email: Path `email` is required.

@@ -26,7 +26,7 @@ const loginUser = async (payload: ILoginUser): Promise<ILoginUserResponse> => {
   //   const isUserExist = await user.isUserExist(id);
 
   const isUserExist = await User.isUserExist(email);
-  console.log('my user is = ', isUserExist);
+  console.log('my email id is = ', email);
 
   if (!isUserExist) {
     throw new ApiError(httpStatus.NOT_FOUND, 'User does not exist');

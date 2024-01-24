@@ -10,19 +10,20 @@ import { UserService } from './user.service';
 
 const regStudent: RequestHandler = catchAsync(
   async (req: Request, res: Response) => {
-    console.log('my request file is = ', req.body);
-    return;
-    const { email, password, confirmPassword, ...student } = req.body;
-    if (password !== confirmPassword) {
-      throw new ApiError(httpStatus.BAD_REQUEST, 'Password does not match');
-    }
-    const user: IUser = {
-      email,
-      role: 'student',
-      password,
-    };
+    // console.log('my request file is = ', req.body);
+    // return;
+    // const { email, password, confirmPassword, ...student } = req.body;
+    // if (password !== confirmPassword) {
+    //   throw new ApiError(httpStatus.BAD_REQUEST, 'Password does not match');
+    // }
+    // const user: IUser = {
+    //   email,
+    //   role: 'student',
+    //   password,
+    // };
 
-    const result = await UserService.regStudent(student, user);
+    // const result = await UserService.regStudent(student, user);
+    const result = await UserService.regStudent(req);
 
     sendResponse<IUser>(res, {
       statusCode: httpStatus.OK,
