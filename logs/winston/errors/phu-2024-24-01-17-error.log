@@ -516,3 +516,191 @@ Wed Jan 24 2024 17:31:3 } [MSAM] error: 🐱‍🏍 globalErrorHandler ~~ [
   }
 ]
 Wed Jan 24 2024 17:31:19 } [MSAM] error: 🐱‍🏍 globalErrorHandler ~~ Student validation failed: hscGpa: Path `hscGpa` is required., hscYear: Path `hscYear` is required., sscGpa: Path `sscGpa` is required., sscYear: Path `sscYear` is required., session: Path `session` is required., dhakaUniversityRegNo: Path `dhakaUniversityRegNo` is required., rollNo: Path `rollNo` is required., motherName: Path `motherName` is required., fatherName: Path `fatherName` is required., permanentAddress: Path `permanentAddress` is required., presentAddress: Path `presentAddress` is required., phoneNumber: Path `phoneNumber` is required., email: Path `email` is required.
+Wed Jan 24 2024 17:37:25 } [MSAM] error: 🐱‍🏍 globalErrorHandler ~~ [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "password"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "confirmPassword"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "body",
+      "sscYear"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "body",
+      "sscGpa"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "body",
+      "hscYear"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "body",
+      "hscGpa"
+    ],
+    "message": "Expected number, received string"
+  }
+]
+Wed Jan 24 2024 17:39:6 } [MSAM] error: 🐱‍🏍 globalErrorHandler ~~ [
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "body",
+      "sscYear"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "body",
+      "sscGpa"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "body",
+      "hscYear"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "body",
+      "hscGpa"
+    ],
+    "message": "Expected number, received string"
+  }
+]
+Wed Jan 24 2024 17:39:50 } [MSAM] error: 🐱‍🏍 globalErrorHandler ~~ [
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "body",
+      "sscYear"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "body",
+      "sscGpa"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "body",
+      "hscYear"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "body",
+      "hscGpa"
+    ],
+    "message": "Expected number, received string"
+  }
+]
+Wed Jan 24 2024 17:39:57 } [MSAM] error: 🐱‍🏍 globalErrorHandler ~~ [
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "body",
+      "sscYear"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "body",
+      "sscGpa"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "body",
+      "hscYear"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "body",
+      "hscGpa"
+    ],
+    "message": "Expected number, received string"
+  }
+]
