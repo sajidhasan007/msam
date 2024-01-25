@@ -14,6 +14,9 @@ export const ClassRoomSchema = new Schema<IClassRoom, ClassModel>({
   description: {
     type: String,
   },
+  classImage: {
+    type: String,
+  },
   teacherId: [
     {
       type: Schema.Types.ObjectId,
