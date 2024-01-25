@@ -5,6 +5,7 @@ import config from '../../../config/index';
 import ApiError from '../../../errors/ApiError';
 import { FileUploadHelper } from '../../../helpers/fileUploadHelper';
 import { IUploadFile } from '../../../interfaces/file';
+import { convertKeysToNumber } from '../../../shared/convertStringToNumber';
 import { IAdmin } from '../admin/admin.interface';
 import { Admin } from '../admin/admin.model';
 import { Student } from '../student/student.model';
@@ -38,13 +39,21 @@ const regStudent = async (req: Request): Promise<IUser | null> => {
   const session = await mongoose.startSession();
   try {
     session.startTransaction();
-    // generate student id
-    // set custom id into both  student & user
 
     // Create student using sesssin
     student.email = user.email;
 
-    const newStudent = await Student.create([student], { session });
+    const newStudent = await Student.create(
+      [
+        convertKeysToNumber(student, [
+          'sscYear',
+          'sscGpa',
+          'hscYear',
+          'hscGpa',
+        ]),
+      ],
+      { session }
+    );
 
     if (!newStudent.length) {
       throw new ApiError(httpStatus.BAD_REQUEST, 'Failed to create student');

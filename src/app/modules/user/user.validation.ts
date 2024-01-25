@@ -17,10 +17,18 @@ const regStudentZodSchema = z.object({
     rollNo: z.string(),
     dhakaUniversityRegNo: z.string(),
     session: z.string(),
-    sscYear: z.number().int().min(1900).max(new Date().getFullYear()),
-    sscGpa: z.number().min(0).max(5),
-    hscYear: z.number().int().min(1900).max(new Date().getFullYear()),
-    hscGpa: z.number().min(0).max(5),
+    sscYear: z
+      .string({ invalid_type_error: 'Please enter valid year.' })
+      .regex(/^\d{4}$/),
+    sscGpa: z
+      .string({ invalid_type_error: 'Please enter valid value.' })
+      .regex(/^(?:[1-4](?:\.\d{1,2})?|5(?:\.0{1,2})?)$/),
+    hscYear: z
+      .string({ invalid_type_error: 'Please enter valid year.' })
+      .regex(/^\d{4}$/),
+    hscGpa: z
+      .string({ invalid_type_error: 'Please enter valid value.' })
+      .regex(/^(?:[1-4](?:\.\d{1,2})?|5(?:\.0{1,2})?)$/),
     gender: z.enum(['male', 'female', 'other']),
     profileImage: z.string().optional(),
   }),
