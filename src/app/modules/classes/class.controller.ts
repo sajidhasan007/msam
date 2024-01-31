@@ -35,6 +35,23 @@ const giveAttendance: RequestHandler = catchAsync(
   }
 );
 
+const addFiles: RequestHandler = catchAsync(
+  async (req: Request, res: Response) => {
+    await ClassService.addFiles(
+      req,
+      req.params.classRoomId,
+      req.params.classId
+    );
+
+    sendResponse<IClasses>(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'Attendance submitted successfully!',
+      // data: result,
+    });
+  }
+);
+
 const getSingleClass: RequestHandler = catchAsync(
   async (req: Request, res: Response) => {
     const result = await ClassService.getSingleClass(
@@ -54,5 +71,6 @@ const getSingleClass: RequestHandler = catchAsync(
 export const ClassController = {
   createClass,
   giveAttendance,
+  addFiles,
   getSingleClass,
 };

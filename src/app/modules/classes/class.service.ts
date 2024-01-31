@@ -13,14 +13,11 @@ const crateClass = async (req: Request): Promise<IClasses | null> => {
   const payload: IClasses = req.body;
   payload.files = [];
   const classRoomId = req.params.classRoomId;
-  // console.log('my class file is = ', req.files?.length);
-
   if (req.files?.length) {
     const length: number = req.files?.length as number;
     const files = req.files as IUploadFile[];
     for (let i = 0; i < length; i++) {
       const uploadedImage = await FileUploadHelper.uploadToCloudinary(files[i]);
-      // console.log('my log is = ', uploadedImage);
       payload.files?.push(uploadedImage?.secure_url as string);
     }
   } else {
@@ -117,21 +114,49 @@ const giveAttendance = async (
   );
 };
 
-// const getAllFloor = async () => {
-//   const allFloor = await Class.find();
-//   return {
-//     meta: {
-//       page: 1,
-//       limit: 10,
-//       total: 10,
-//     },
-//     data: allFloor,
-//   };
-// };
+const addFiles = async (
+  req: Request,
+  classRoomId: string,
+  classId: string
+): Promise<void> => {
+  const result = await ClassRoom.findOne({ _id: classRoomId });
+  if (!result) {
+    throw new ApiError(httpStatus.NOT_FOUND, 'Class room not found.');
+  }
+
+  if (!idEqualtyCheck(result?.classes as Types.ObjectId[])?.includes(classId)) {
+    throw new ApiError(httpStatus.NOT_FOUND, 'Class not found !');
+  }
+
+  const updatedFiles = [];
+
+  if (req.files?.length) {
+    const length: number = req.files?.length as number;
+    const files = req.files as IUploadFile[];
+    for (let i = 0; i < length; i++) {
+      const uploadedImage = await FileUploadHelper.uploadToCloudinary(files[i]);
+      updatedFiles.push(uploadedImage?.secure_url as string);
+    }
+  }
+
+  console.log('my files are = ', req.files);
+
+  // await Class.updateOne(
+  //   { _id: classId },
+  //   {
+  //     $set: {
+  //       isDone: true,
+  //       students: payload?.students,
+  //     },
+  //     // $push: { students: { $each: payload?.students } },
+  //   }
+  // );
+};
 
 export const ClassService = {
   crateClass,
   giveAttendance,
+  addFiles,
   getSingleClass,
   // getAllFloor,
 };

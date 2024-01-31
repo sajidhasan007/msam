@@ -20,6 +20,14 @@ router.post(
   ClassController.giveAttendance
 );
 
+router.put(
+  '/add-files/class-room/:classRoomId/class/:classId',
+  FileUploadHelper.upload.array('files'),
+
+  auth(ENUM_USER_ROLE.TEACHER),
+  ClassController.addFiles
+);
+
 router.get(
   '/class-room/:classRoomId/class/:classId',
   auth(ENUM_USER_ROLE.TEACHER),
