@@ -7,10 +7,7 @@ import { ClassService } from './class.service';
 
 const createClass: RequestHandler = catchAsync(
   async (req: Request, res: Response) => {
-    const result = await ClassService.crateClass(
-      req.body,
-      req.params.classRoomId
-    );
+    const result = await ClassService.crateClass(req);
 
     sendResponse<IClasses>(res, {
       statusCode: httpStatus.OK,

@@ -1,15 +1,34 @@
+import { Request } from 'express';
 import httpStatus from 'http-status';
 import mongoose, { Types } from 'mongoose';
 import ApiError from '../../../errors/ApiError';
+import { FileUploadHelper } from '../../../helpers/fileUploadHelper';
+import { IUploadFile } from '../../../interfaces/file';
 import { idEqualtyCheck } from '../../../shared/idEqualtyCheck';
 import { ClassRoom } from '../class-room/classRoom.model';
 import { IClasses } from './class.interface';
 import { Class } from './class.model';
 
-const crateClass = async (
-  payload: IClasses,
-  classRoomId: string
-): Promise<IClasses | null> => {
+const crateClass = async (req: Request): Promise<IClasses | null> => {
+  const payload: IClasses = req.body;
+  payload.files = [];
+  const classRoomId = req.params.classRoomId;
+  // console.log('my class file is = ', req.files?.length);
+
+  if (req.files?.length) {
+    const length: number = req.files?.length as number;
+    const files = req.files as IUploadFile[];
+    for (let i = 0; i < length; i++) {
+      const uploadedImage = await FileUploadHelper.uploadToCloudinary(files[i]);
+      // console.log('my log is = ', uploadedImage);
+      payload.files?.push(uploadedImage?.secure_url as string);
+    }
+  } else {
+    payload.files = [];
+  }
+
+  // console.log('my class data is = ', payload);
+  // return;
   const session = await mongoose.startSession();
   session.startTransaction();
 

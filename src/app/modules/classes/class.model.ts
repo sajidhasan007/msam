@@ -6,6 +6,10 @@ export const ClassSchema = new Schema<IClasses, ClassesModel>({
     type: String,
     required: true,
   },
+  dateTime: {
+    type: Date,
+    required: true,
+  },
   isDone: {
     type: Boolean,
     default: false,
@@ -13,18 +17,16 @@ export const ClassSchema = new Schema<IClasses, ClassesModel>({
   description: {
     type: String,
   },
-  dateTime: {
-    type: Date,
-  },
+
   students: [
     {
       type: Schema.Types.ObjectId,
       ref: 'Student',
     },
   ],
-  // file: {
-  //   type: String,
-  // },
+  files: {
+    type: [String],
+  },
 });
 
 export const Class = model<IClasses, ClassesModel>('Class', ClassSchema);

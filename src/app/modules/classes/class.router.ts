@@ -1,5 +1,6 @@
 import express from 'express';
 import { ENUM_USER_ROLE } from '../../../enums/user';
+import { FileUploadHelper } from '../../../helpers/fileUploadHelper';
 import auth from '../../middlewares/auth';
 import validateRequest from '../../middlewares/validateRequest';
 import { ClassController } from './class.controller';
@@ -8,6 +9,7 @@ const router = express.Router();
 
 router.post(
   '/:classRoomId',
+  FileUploadHelper.upload.array('files'),
   auth(ENUM_USER_ROLE.TEACHER),
   ClassController.createClass
 );

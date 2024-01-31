@@ -12,9 +12,6 @@ const createClassRoom = async (req: Request): Promise<IClassRoom | null> => {
   const data: IClassRoom = req.body;
 
   if (req.file) {
-    // data.classImage = req.file
-  }
-  if (req.file) {
     const file = req.file as IUploadFile;
     const uploadedImage = await FileUploadHelper.uploadToCloudinary(file);
     data.classImage = uploadedImage?.secure_url || null;
