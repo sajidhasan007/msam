@@ -49,6 +49,11 @@
             "date": 1706680939316,
             "name": "/home/sajid007/Desktop/Personal/medical_student_attendance_management/logs/winston/successes/phu-2024-31-01-12-success.log",
             "hash": "e181742f31fa1777db9bfb9903c1d956f4f5b4ae411e803ed6e01ae9873f6ecd"
+        },
+        {
+            "date": 1706684453410,
+            "name": "/home/sajid007/Desktop/Personal/medical_student_attendance_management/logs/winston/successes/phu-2024-31-01-13-success.log",
+            "hash": "213fc151aee1ea3aa8c414b05e6a40977f834ce057d82e0169edf258c9fff3db"
         }
     ],
     "hashType": "sha256"
