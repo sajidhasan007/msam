@@ -8,7 +8,7 @@ import { ClassRoomService } from './classRoom.service';
 const createClassRoom: RequestHandler = catchAsync(
   async (req: Request, res: Response) => {
     req.body.teacherId = req?.user?.userId;
-    const result = await ClassRoomService.createClassRoom(req.body);
+    const result = await ClassRoomService.createClassRoom(req);
     sendResponse<IClassRoom>(res, {
       statusCode: httpStatus.OK,
       success: true,

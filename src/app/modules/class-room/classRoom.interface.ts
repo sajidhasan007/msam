@@ -8,9 +8,9 @@ export type IClassRoom = {
   _id?: string;
   title: string;
   classCode: string;
-  classImage?: string;
-  teacherId?: Types.ObjectId[] | ITeacher[];
   description?: string;
+  classImage?: string | null;
+  teacherId?: Types.ObjectId[] | ITeacher[];
   students?: Types.ObjectId[] | IStudent[];
   classes?: Types.ObjectId[] | IClasses[];
 };

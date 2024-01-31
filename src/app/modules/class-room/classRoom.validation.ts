@@ -7,6 +7,7 @@ const classRoomZodSchema = z.object({
     classCode: z.string(),
     teacherId: z.string().optional(),
     description: z.string().optional(),
+    classImage: z.any().optional(),
   }),
 });
 

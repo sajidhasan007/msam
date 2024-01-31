@@ -1,14 +1,28 @@
+import { Request } from 'express';
 import httpStatus from 'http-status';
 import mongoose, { Types } from 'mongoose';
 import ApiError from '../../../errors/ApiError';
+import { FileUploadHelper } from '../../../helpers/fileUploadHelper';
+import { IUploadFile } from '../../../interfaces/file';
 import { idEqualtyCheck } from '../../../shared/idEqualtyCheck';
 import { IClassRoom } from './classRoom.interface';
 import { ClassRoom } from './classRoom.model';
 
-const createClassRoom = async (
-  payload: IClassRoom
-): Promise<IClassRoom | null> => {
-  const newClassRoom = await ClassRoom.create(payload);
+const createClassRoom = async (req: Request): Promise<IClassRoom | null> => {
+  const data: IClassRoom = req.body;
+
+  if (req.file) {
+    // data.classImage = req.file
+  }
+  if (req.file) {
+    const file = req.file as IUploadFile;
+    const uploadedImage = await FileUploadHelper.uploadToCloudinary(file);
+    data.classImage = uploadedImage?.secure_url || null;
+  } else {
+    data.classImage = null;
+  }
+  console.log('my class room data is = ', data);
+  const newClassRoom = await ClassRoom.create(data);
   return newClassRoom;
 };
 
